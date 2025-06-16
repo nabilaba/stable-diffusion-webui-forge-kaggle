@@ -38,6 +38,7 @@ def setup_environment():
 
 def download_all_models():
     print("📦 Downloading model files")
+    base_path = os.path.abspath(os.path.join(os.getcwd(), DOWNLOAD_DIR))
     folders = {
         "controlnet": "models/ControlNet",
         "controlnet1.1.txt": "models/ControlNet",
@@ -47,7 +48,7 @@ def download_all_models():
     }
 
     for file_name, target_folder in folders.items():
-        file_path = os.path.join(DOWNLOAD_DIR, file_name)
+        file_path = os.path.join(base_path, file_name)
         if os.path.exists(file_path):
             with open(file_path, "r") as f:
                 for url in f:
