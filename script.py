@@ -4,19 +4,32 @@ import threading
 import time
 import subprocess
 
-# 🧠 Parse token from command-line argument
+# 🧠 Parse token and additional download args
 TOKEN = None
+EXTRA_DOWNLOADS = {
+    "stable-diffusion": [],
+    "controlnet": [],
+    "lora": [],
+    "controlnetpreprocessor": [],
+    "embeddings": [],
+    "extensions": [],
+}
+
 for arg in sys.argv:
     if arg.startswith("token="):
         TOKEN = arg.split("=", 1)[1]
+    else:
+        for category in EXTRA_DOWNLOADS:
+            if arg.startswith(f"{category}="):
+                url = arg.split("=", 1)[1]
+                EXTRA_DOWNLOADS[category].append(url)
 
 if not TOKEN:
-    print("❌ Error: You must pass token like `python start.py token=YOUR_TOKEN`")
+    print("❌ Error: You must pass token like `python script.py token=YOUR_TOKEN`")
     sys.exit(1)
 
 BASE_FOLDER = "nabil"
 DOWNLOAD_DIR = "downloads"
-
 
 def run_cmd(cmd):
     print(f"🔧 Running: {cmd}")
@@ -25,12 +38,10 @@ def run_cmd(cmd):
         print(f"❌ Failed: {cmd}")
     return result
 
-
 def setup_environment():
     print("📦 Installing Zrok")
     run_cmd("curl -sSL https://get.openziti.io/install.bash | bash -s zrok")
 
-    # disable zrok if it was previously enabled
     run_cmd("zrok disable")
     
     print("🔐 Enabling Zrok (headless)")
@@ -38,11 +49,8 @@ def setup_environment():
 
     print("📁 Cloning SD WebUI Forge")
     os.chdir("/kaggle/working")
-    run_cmd(
-        f"git clone https://github.com/lllyasviel/stable-diffusion-webui-forge.git {BASE_FOLDER}"
-    )
+    run_cmd(f"git clone https://github.com/lllyasviel/stable-diffusion-webui-forge.git {BASE_FOLDER}")
     os.chdir(BASE_FOLDER)
-
 
 def download_all_models():
     print("📦 Downloading model files")
@@ -63,12 +71,26 @@ def download_all_models():
                     url = url.strip()
                     if url and not url.startswith("#"):
                         print(f"⬇️ {file_name} → {target_folder}")
-                        run_cmd(
-                            f'wget --content-disposition -P "{target_folder}" "{url}"'
-                        )
+                        run_cmd(f'wget --content-disposition -P "{target_folder}" "{url}"')
         else:
             print(f"⚠️ Skipping missing file: {file_name}")
 
+def download_extra_urls():
+    EXTRA_PATHS = {
+        "stable-diffusion": "models/Stable-diffusion",
+        "controlnet": "models/ControlNet",
+        "lora": "models/Lora",
+        "controlnetpreprocessor": "models/ControlNetPreprocessor",
+        "embeddings": "embeddings",
+        "extensions": "extensions",
+    }
+
+    for category, urls in EXTRA_DOWNLOADS.items():
+        target_dir = EXTRA_PATHS[category]
+        os.makedirs(target_dir, exist_ok=True)
+        for url in urls:
+            print(f"⬇️ Extra download ({category}): {url}")
+            run_cmd(f'wget --content-disposition -P "{target_dir}" "{url}"')
 
 def run_webui():
     while True:
@@ -78,20 +100,18 @@ def run_webui():
         )
         print(f"❌ WebUI exited with code {exit_code}. Restarting...")
 
-
 def start_webui_thread():
     threading.Thread(target=run_webui).start()
     print("⏳ Waiting for WebUI to initialize...")
     time.sleep(20)
 
-
 def start_zrok_share():
     print("🌐 Creating Zrok share")
     run_cmd('zrok share public --headless "http://localhost:7860"')
 
-
 # 🔁 Execute all steps
 setup_environment()
 download_all_models()
+download_extra_urls()
 start_webui_thread()
 start_zrok_share()
