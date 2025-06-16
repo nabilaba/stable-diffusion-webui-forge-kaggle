@@ -30,6 +30,9 @@ def setup_environment():
     print("📦 Installing Zrok")
     run_cmd("curl -sSL https://get.openziti.io/install.bash | bash -s zrok")
 
+    # disable zrok if it was previously enabled
+    run_cmd("zrok disable")
+    
     print("🔐 Enabling Zrok (headless)")
     run_cmd(f"zrok enable --headless {TOKEN}")
 
