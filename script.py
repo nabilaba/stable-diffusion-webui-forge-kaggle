@@ -4,7 +4,7 @@ import threading
 import time
 import subprocess
 
-# 🧠 Parse token and additional download args
+# 🧠 Parse token and download args
 TOKEN = None
 EXTRA_DOWNLOADS = {
     "stable-diffusion": [],
@@ -12,7 +12,7 @@ EXTRA_DOWNLOADS = {
     "lora": [],
     "controlnetpreprocessor": [],
     "embeddings": [],
-    "extensions": [],
+    "extension": [],
 }
 
 for arg in sys.argv:
@@ -82,15 +82,30 @@ def download_extra_urls():
         "lora": "models/Lora",
         "controlnetpreprocessor": "models/ControlNetPreprocessor",
         "embeddings": "embeddings",
-        "extensions": "extensions",
     }
 
     for category, urls in EXTRA_DOWNLOADS.items():
+        if category == "extension":
+            continue  # handled separately
         target_dir = EXTRA_PATHS[category]
         os.makedirs(target_dir, exist_ok=True)
         for url in urls:
             print(f"⬇️ Extra download ({category}): {url}")
             run_cmd(f'wget --content-disposition -P "{target_dir}" "{url}"')
+
+def clone_extensions():
+    if not EXTRA_DOWNLOADS["extension"]:
+        return
+    os.makedirs("extensions", exist_ok=True)
+    os.chdir("extensions")
+    for url in EXTRA_DOWNLOADS["extension"]:
+        name = url.rstrip("/").split("/")[-1].replace(".git", "")
+        if os.path.exists(name):
+            print(f"🔁 Extension already cloned: {name}")
+            continue
+        print(f"🧩 Cloning extension: {url}")
+        run_cmd(f"git clone {url}")
+    os.chdir("..")
 
 def run_webui():
     while True:
@@ -113,5 +128,6 @@ def start_zrok_share():
 setup_environment()
 download_all_models()
 download_extra_urls()
+clone_extensions()
 start_webui_thread()
 start_zrok_share()
