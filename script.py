@@ -39,6 +39,8 @@ def setup_environment():
 def download_all_models():
     print("📦 Downloading model files")
     base_path = os.path.abspath(os.path.join(os.getcwd(), DOWNLOAD_DIR))
+    print(f"Using base path: {base_path}")
+    print(os.getcwd())
     folders = {
         "controlnet": "models/ControlNet",
         "controlnet1.1.txt": "models/ControlNet",
