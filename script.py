@@ -42,7 +42,7 @@ def download_all_models():
     print(f"Using base path: {base_path}")
     print(os.getcwd())
     folders = {
-        "controlnet": "models/ControlNet",
+        "controlnet.txt": "models/ControlNet",
         "controlnet1.1.txt": "models/ControlNet",
         "lora.txt": "models/Lora",
         "embeddings.txt": "embeddings",
