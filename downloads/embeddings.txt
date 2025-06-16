@@ -1,0 +1,3 @@
+# Embeddings
+# BadDream UnrealisticDream
+https://civitai.com/api/download/models/77169?type=Model&format=PickleTensor

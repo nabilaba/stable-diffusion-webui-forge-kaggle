@@ -1,0 +1,17 @@
+# Canny Anime
+https://civitai.com/api/download/models/155263?type=Model&format=SafeTensor&size=full&fp=fp32&token=a17a18304886a8f0cd35759b15769600
+
+# Depth Anime
+https://civitai.com/api/download/models/155265?type=Model&format=SafeTensor&size=full&fp=fp32&token=a17a18304886a8f0cd35759b15769600
+
+# OpenPose Anime v2
+https://civitai.com/api/download/models/155270?type=Model&format=SafeTensor&size=full&fp=fp32&token=a17a18304886a8f0cd35759b15769600
+
+# Replicate Anime v2
+https://civitai.com/api/download/models/164965?type=Model&format=SafeTensor&size=full&fp=fp32&token=a17a18304886a8f0cd35759b15769600
+
+# Scribble
+https://civitai.com/api/download/models/155273?type=Model&format=SafeTensor&size=full&fp=fp32&token=a17a18304886a8f0cd35759b15769600
+
+# Lineart
+https://civitai.com/api/download/models/267516?type=Model&format=SafeTensor&size=full&fp=fp16&token=a17a18304886a8f0cd35759b15769600

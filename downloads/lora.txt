@@ -1,0 +1,3 @@
+# Lora
+# <lora:add-detail-xl:-1>
+https://civitai.com/api/download/models/135867?type=Model&format=SafeTensor
