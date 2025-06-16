@@ -51,6 +51,8 @@ def download_all_models():
 
     for file_name, target_folder in folders.items():
         file_path = os.path.join(base_path, file_name)
+        print(f"🔍 Checking for {file_name} in {base_path}")
+        print(file_path)
         if os.path.exists(file_path):
             with open(file_path, "r") as f:
                 for url in f:
