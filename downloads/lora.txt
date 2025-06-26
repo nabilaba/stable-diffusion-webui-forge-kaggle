@@ -1,3 +1,6 @@
 # Lora
-# <lora:add-detail-xl:-1>
-https://civitai.com/api/download/models/135867?type=Model&format=SafeTensor
+# Detail Tweaker LoRA (细节调整LoRA)
+https://civitai.com/api/download/models/62833?type=Model&format=SafeTensor&token=a17a18304886a8f0cd35759b15769600
+
+# Add More Details - Detail Enhancer / Tweaker (细节调整) LoRA
+https://civitai.com/api/download/models/87153?type=Model&format=SafeTensor

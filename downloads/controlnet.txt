@@ -1,17 +1,23 @@
-# Canny Anime
-https://civitai.com/api/download/models/155263?type=Model&format=SafeTensor&size=full&fp=fp32&token=a17a18304886a8f0cd35759b15769600
+# Tile
+https://civitai.com/api/download/models/67566?type=Model&format=SafeTensor
+https://civitai.com/api/download/models/67566?type=Config&format=Other
 
-# Depth Anime
-https://civitai.com/api/download/models/155265?type=Model&format=SafeTensor&size=full&fp=fp32&token=a17a18304886a8f0cd35759b15769600
+# Depth
+https://civitai.com/api/download/models/44736?type=Model&format=SafeTensor
+https://civitai.com/api/download/models/44736?type=Config&format=Other
 
-# OpenPose Anime v2
-https://civitai.com/api/download/models/155270?type=Model&format=SafeTensor&size=full&fp=fp32&token=a17a18304886a8f0cd35759b15769600
+# OpenPose
+https://civitai.com/api/download/models/44811?type=Model&format=SafeTensor&size=pruned&fp=fp16
+https://civitai.com/api/download/models/44811?type=Config&format=Other
 
-# Replicate Anime v2
-https://civitai.com/api/download/models/164965?type=Model&format=SafeTensor&size=full&fp=fp32&token=a17a18304886a8f0cd35759b15769600
+# Canny
+https://civitai.com/api/download/models/44716?type=Model&format=SafeTensor&size=pruned&fp=fp16
+https://civitai.com/api/download/models/44716?type=Config&format=Other
 
 # Scribble
-https://civitai.com/api/download/models/155273?type=Model&format=SafeTensor&size=full&fp=fp32&token=a17a18304886a8f0cd35759b15769600
+https://civitai.com/api/download/models/44787?type=Model&format=SafeTensor&size=pruned&fp=fp16
+https://civitai.com/api/download/models/44787?type=Config&format=Other
 
 # Lineart
-https://civitai.com/api/download/models/267516?type=Model&format=SafeTensor&size=full&fp=fp16&token=a17a18304886a8f0cd35759b15769600
+https://civitai.com/api/download/models/44877?type=Model&format=SafeTensor&size=pruned&fp=fp16
+https://civitai.com/api/download/models/44877?type=Config&format=Other

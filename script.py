@@ -57,7 +57,6 @@ def download_all_models():
     base_path = os.path.abspath(os.path.join(os.getcwd(), "..", DOWNLOAD_DIR))
     folders = {
         "controlnet.txt": "models/ControlNet",
-        "controlnet1.1.txt": "models/ControlNet",
         "lora.txt": "models/Lora",
         "embeddings.txt": "embeddings",
         "preprocessor.txt": "models/ControlNetPreprocessor",
