@@ -21,8 +21,9 @@ for arg in sys.argv:
     else:
         for category in EXTRA_DOWNLOADS:
             if arg.startswith(f"{category}="):
-                url = arg.split("=", 1)[1]
-                EXTRA_DOWNLOADS[category].append(url)
+                urls = arg.split("=", 1)[1]
+                for url in urls.split(","):
+                    EXTRA_DOWNLOADS[category].append(url.strip())
 
 if not TOKEN:
     print("❌ Error: You must pass token like `python script.py token=YOUR_TOKEN`")
