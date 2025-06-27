@@ -4,3 +4,9 @@ https://civitai.com/api/download/models/62833?type=Model&format=SafeTensor&token
 
 # Add More Details - Detail Enhancer / Tweaker (细节调整) LoRA
 https://civitai.com/api/download/models/87153?type=Model&format=SafeTensor
+
+# Pika's Super Realistic Detailed Eyes [SRDE]
+https://civitai.com/api/download/models/60140?type=Model&format=SafeTensor&token=a17a18304886a8f0cd35759b15769600
+
+# Fine Tuned Detailed Eyes
+https://civitai.com/api/download/models/355491?type=Model&format=SafeTensor&token=a17a18304886a8f0cd35759b15769600

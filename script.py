@@ -63,6 +63,16 @@ def download_all_models():
         "preprocessor.txt": "models/ControlNetPreprocessor",
     }
 
+    extension_file = os.path.join(base_path, "extension.txt")
+    if os.path.exists(extension_file):
+        with open(extension_file, "r") as f:
+            for url in f:
+                url = url.strip()
+                if url and not url.startswith("#"):
+                    EXTRA_DOWNLOADS["extension"].append(url)
+    else:
+        print("⚠️ Skipping missing file: extension.txt")
+
     for file_name, target_folder in folders.items():
         file_path = os.path.join(base_path, file_name)
         if os.path.exists(file_path):

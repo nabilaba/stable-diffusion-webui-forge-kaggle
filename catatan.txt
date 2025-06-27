@@ -1,9 +1,9 @@
 majicmixRealistic_v7.safetensors 0.44
-mengxMixReal_v3.safetensors 0.44
-dream2reality_v10.safetensors 0.44
-majicmixLux_v3.safetensors 0.44
+https://civitai.com/models/142467/mengxmixreal 0.44
+https://civitai.com/models/105573/dream2reality 0.44
+https://civitai.com/models/56967/majicmix-lux 0.44
 endlessreality_v7.safetensors 0.44
-epicrealism_naturalSinRC1VAE.safetensors 0.44 <lora:DetailedEyes_V3:0.9>
+https://civitai.com/models/25694?modelVersionId=143906 0.44 <lora:DetailedEyes_V3:0.9>
 realisian_v60.safetensors 0.44
 thisisreal_v70.safetensors 0.44
 
