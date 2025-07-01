@@ -1,0 +1,3 @@
+# Lora
+# RMSDXL Enhance XL [tool]
+https://civitai.com/api/download/models/268857?type=Model&format=SafeTensor&token=a17a18304886a8f0cd35759b15769600

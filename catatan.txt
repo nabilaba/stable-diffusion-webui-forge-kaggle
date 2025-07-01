@@ -1,11 +1,6 @@
-majicmixRealistic_v7.safetensors 0.44
-https://civitai.com/models/142467/mengxmixreal 0.44
-https://civitai.com/models/105573/dream2reality 0.44
-https://civitai.com/models/56967/majicmix-lux 0.44
-endlessreality_v7.safetensors 0.44
-https://civitai.com/models/25694?modelVersionId=143906 0.44 <lora:DetailedEyes_V3:0.9>
-realisian_v60.safetensors 0.44
-thisisreal_v70.safetensors 0.44
+majicmixRealistic_v7.safetensors
+https://civitai.com/models/105573/dream2reality
+endlessreality_v7.safetensors
 
 Negative Prompt:
 cartoon, anime, 3d render, cgi, doll-like skin, waxy skin, extra limbs, extra fingers, missing fingers, fused fingers, broken hands, deformed hands, poorly drawn hands, long neck, bad anatomy, distorted face, unrealistic face, asymmetrical eyes, glitchy eyes, unnatural skin texture, incorrect proportions, blurry, low res, pixelated, overexposed, underexposed, watermark, text, signature, logo, watermark, text, censored, deformed, bad anatomy, disfigured, poorly drawn face, mutated, extra limb, ugly, poorly drawn hands, missing limb, floating limbs, disconnected limbs, disconnected head, malformed hands, long neck, mutated hands and fingers, bad hands, missing fingers, cropped, worst quality, low quality, mutation, poorly drawn, huge calf, fused hand, missing hand, disappearing arms, disappearing thigh, disappearing calf, disappearing legs, fused fingers, abnormal eye proportion, abnormal hands, abnormal legs, abnormal feet, abnormal fingers

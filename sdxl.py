@@ -26,11 +26,11 @@ for arg in sys.argv:
                     EXTRA_DOWNLOADS[category].append(url.strip())
 
 if not TOKEN:
-    print("❌ Error: You must pass token like `python script.py token=YOUR_TOKEN`")
+    print("❌ Error: You must pass token like `python sdxl.py token=YOUR_TOKEN`")
     sys.exit(1)
 
 BASE_FOLDER = "nabil"
-DOWNLOAD_DIR = "downloads"
+DOWNLOAD_DIR = "sdxl"
 
 def run_cmd(cmd):
     print(f"🔧 Running: {cmd}")

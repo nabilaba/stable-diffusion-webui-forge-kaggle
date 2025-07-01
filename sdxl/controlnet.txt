@@ -1,0 +1,11 @@
+# Depth
+https://civitai.com/api/download/models/158419?type=Model&format=SafeTensor&size=full&fp=fp32&token=a17a18304886a8f0cd35759b15769600
+https://civitai.com/api/download/models/155265?type=Model&format=SafeTensor&size=full&fp=fp32&token=a17a18304886a8f0cd35759b15769600
+
+# OpenPose
+https://civitai.com/api/download/models/155268?type=Model&format=SafeTensor&size=full&fp=fp32&token=a17a18304886a8f0cd35759b15769600
+https://civitai.com/api/download/models/155270?type=Model&format=SafeTensor&size=full&fp=fp32&token=a17a18304886a8f0cd35759b15769600
+
+# Canny
+https://civitai.com/api/download/models/158416?type=Model&format=SafeTensor&size=full&fp=fp32&token=a17a18304886a8f0cd35759b15769600
+https://civitai.com/api/download/models/155263?type=Model&format=SafeTensor&size=full&fp=fp32&token=a17a18304886a8f0cd35759b15769600
