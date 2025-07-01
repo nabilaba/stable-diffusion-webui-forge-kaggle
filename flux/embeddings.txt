@@ -1,0 +1,4 @@
+# Embeddings
+https://civitai.com/api/download/models/77169?type=Model&format=PickleTensor
+https://civitai.com/api/download/models/77173?type=Model&format=PickleTensor
+https://civitai.com/api/download/models/60938?type=Negative&format=Other
