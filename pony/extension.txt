@@ -1,0 +1,2 @@
+https://github.com/nabilaba/file-deleter-stable-diffusion-webui.git
+https://github.com/Gourieff/sd-webui-reactor-sfw.git

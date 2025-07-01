@@ -1,0 +1,7 @@
+# ControlNet Support
+# Depth Preprocessor
+https://huggingface.co/lllyasviel/ControlNet/resolve/main/annotator/ckpts/dpt_hybrid-midas-501f0c75.pt
+
+# OpenPose Preprocessor
+https://huggingface.co/yzd-v/DWPose/resolve/main/yolox_l.onnx
+https://huggingface.co/yzd-v/DWPose/resolve/main/dw-ll_ucoco_384.onnx
